@@ -1,5 +1,5 @@
 <?php
     require "banco.php";
-    $banco = new Banco("localhost", "usuarios", "root", "");
+    $banco = new Banco("localhost", "TestesCRUD", "root", "");
     
 ?>
