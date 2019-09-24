@@ -14,7 +14,7 @@
         }
         
     //Método pra executar Query
-        public function Query($sql){
+        public function query($sql){
             $query = $this->pdo->Query($sql);
             $this->numRows = $query->rowCount();
             $this->array = $query->fetchAll();
@@ -24,11 +24,22 @@
         public function numRows(){
             return $this->numRows;
         }
-    }
-    // Método Result
-        public function Result(){
+    //Método Result
+        public function result(){
             return $this->array;
         }
-        
-    
+
+    //Método insert 
+        public function insert($table, $data){
+            if(!empty($table) && (is_array($data) && count($data) > 0)){
+                $sql = "INSERT INTO".$table."SET";
+                $dados = Array();
+                foreach ($data as $key => $value) {
+                    $dados[] = $key."= '". addslashes($value)."'";
+                }
+                $sql = sql.implode(",", $dados);
+                $this->pdo->query($sql);
+            }
+        }
+    }
 ?>
