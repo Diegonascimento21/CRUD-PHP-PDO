@@ -25,5 +25,10 @@
             return $this->numRows;
         }
     }
+    // Método Result
+        public function Result(){
+            return $this->array;
+        }
+        
     
 ?>
