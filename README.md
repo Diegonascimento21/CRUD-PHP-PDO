@@ -1,4 +1,4 @@
-<h1>CRUD php utiliando orientação a objetos e PDO</h1>
+<h2>CRUD php utilizando orientação a objetos e PDO</h2>
 <hr>
 <li>PDO</li>
 <li>MySQL</li>
